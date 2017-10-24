@@ -40,7 +40,7 @@ print("  - msg  :", msg)
 print("  - R    :", Rstr)
 
 print("\n1. Go on a blockchain explorer and extract the raw tx corresponding to the above txid:")
-# to get the raw tx add "?format=hex"
+# with blockchain info to get the raw tx add "?format=hex"
 # https://blockchain.info/tx/f16dd2eee2254a47690fb56c112590233f76e9c6b0ac80d6911b7a34ef0d81dd?format=hex
 rawTx = "01000000012b8aa127de3d63887c78d5d7794fd404835bfb2ea867924fff1d651984739d21000000006b4830450221008d0fbae78e97e3776437f66d708f7b88c8b0549cf7a56e6e0cb82f01d94bd57b02206002fcd0f3a10920774f0b0518701f891874587cd0be7261b9f3d7860a103bb00121039697e867ae7c317d60e3b5e1cc9d35cadb1178c422e567ec4aee82c6f46a06f3ffffffff0110980200000000001976a914030c8a43b75b3109875c94139b2b95734090737888ac00000000"
 print(rawTx)
@@ -63,5 +63,6 @@ print(hex(Wrecomputed[1])[2:])
 print("\n6. Check that the x coord of the recomputed W is equal to the one seen on the blockchain")
 assert x_W == hex(Wrecomputed[0])[2:]
 print("\n   *** Verified! *** ")
+
 print("\nThis proves the commitment, in fact committing ex-post is not feasible ")
 print("because the map R -> h(msg||R)G + R is not computationally invertible")
